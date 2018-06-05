@@ -71,7 +71,7 @@ def sortdictionary(d):
         elif len(d.get(key)) == 1:
             entitiesToRemove.append(key)
 
-#verwijdert alle artikelen die voorkomen in de lijst uit de dictionary
+#verwijdert alle artikelen die voorkomen in de gemaakte lijst uit de dictionary
     for x in entitiesToRemove:
         if x in d:
             d.pop(x)
@@ -82,9 +82,9 @@ def sortdictionary(d):
 
 #maakt een csv met een gegeven bestandnaam aan in dezelfde directory als het script
 def savelist(a, bestandnaam):
-    with open(bestandnaam, 'w') as outcsv:  
+    with open(bestandnaam, 'w', newline='') as outcsv:  
         wr = csv.writer(outcsv)
-        wr.writerow("Sample_id,pubmed_id")
+        wr.writerow(["pubmed articles","sample_id"])
         wr.writerows(a.items())
 
 def main():

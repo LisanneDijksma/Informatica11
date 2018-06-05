@@ -1,0 +1,16 @@
+sample_id,KEGG pathway id
+lp_0001,path:lpl02020
+lp_0002,"['path:lpl00230', 'path:lpl00240', 'path:lpl03030', 'path:lpl03430', 'path:lpl03440']"
+lp_0005,path:lpl03440
+lp_0009,path:lpl03010
+lp_0010,"['path:lpl03030', 'path:lpl03430', 'path:lpl03440']"
+lp_0011,path:lpl03010
+lp_0013,path:lpl03010
+lp_0014,path:lpl03030
+lp_0016,"['path:lpl00330', 'path:lpl00332']"
+lp_0017,"['path:lpl00330', 'path:lpl00332']"
+lp_0018,path:lpl02024
+lp_0022,"['path:lpl00500', 'path:lpl00520']"
+lp_0027,path:lpl00500
+lp_0036,path:lpl02020
+lp_0037,path:lpl02020
