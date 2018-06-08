@@ -34,3 +34,8 @@ Om het script kan gestart worden in de commandline door via het "cd" commando na
 Output
 
 Na het runnen van de workflow worden er verschillende output bestanden gegegenereerd die worden verwerkt in een rapport. Om dit rapport te bekijken kan er worden geklikt op het .html bestand. 
+
+Belangrijk:
+
+    Als de workflow opnieuw wordt uitgevoerd en er wijzigingen zijn aan de bestanden moeten alle output bestanden worden                verwijderd uit de "project11.venv" map, of moet het "snakemake --forceall" commando worden gebruikt. 
+
