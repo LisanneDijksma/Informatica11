@@ -21,6 +21,7 @@ Dependencies
     
     Miniconda - python3 versie
     R 3.4.4
+        library "seqinr"
 
 Preparations
 
