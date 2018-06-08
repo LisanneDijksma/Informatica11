@@ -1,0 +1,22 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	genes
+	1
+
+rule genes:
+    input: ../Documenten/Informatica11/Project11/id_test.csv
+    output: ../Documenten/Informatica11/Project11/sequences.fasta
+    jobid: 0
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 14 of /home/lisanne/project11.venv/Snakefile:
+Missing files after 5 seconds:
+../Documenten/Informatica11/Project11/sequences.fasta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-04T182014.003054.snakemake.log

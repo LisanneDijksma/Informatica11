@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	get_genes
+	1	get_ids
+	2
+
+rule get_ids:
+    input: ../Blok11/data/RNA-Seq-counts.txt
+    output: ID.csv
+    jobid: 1
+
+Finished job 1.
+1 of 2 steps (50%) done
+
+rule get_genes:
+    input: ID.csv
+    output: ../Documenten/Informatica11/Project11/sequences.fasta
+    jobid: 0
+
+Terminating processes on user request, this might take some time.
+    Error in rule get_genes:
+        jobid: 0
+        output: ../Documenten/Informatica11/Project11/sequences.fasta
+
+RuleException:
+CalledProcessError in line 18 of /home/lisanne/project11.venv/Snakefile:
+Command ' set -euo pipefail;  /home/lisanne/miniconda3/bin/python /home/lisanne/Documenten/Informatica11/Project11/.snakemake.9w0tckqv.function_gene.py ' returned non-zero exit status 1.
+  File "/home/lisanne/project11.venv/Snakefile", line 18, in __rule_get_genes
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-04T190223.041456.snakemake.log

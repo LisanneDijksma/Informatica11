@@ -1,0 +1,2 @@
+SyntaxError in line 24 of /home/lisanne/project11.venv/Snakefile:
+Multiple run or shell keywords in rule get_genes. (Snakefile, line 24)

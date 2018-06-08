@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	get_functions
+	1
+
+rule get_functions:
+    input: ID.csv
+    output: functions_per_id.csv
+    jobid: 0
+
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-08T224852.528165.snakemake.log

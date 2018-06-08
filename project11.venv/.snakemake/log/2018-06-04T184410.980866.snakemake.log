@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	1	get_genes
+	2
+
+rule get_genes:
+    input: ../Blok11/data/RNA-Seq-counts.txt
+    output: ID.csv
+    jobid: 1
+
+    Error in rule get_genes:
+        jobid: 1
+        output: ID.csv
+
+RuleException:
+CalledProcessError in line 12 of /home/lisanne/project11.venv/Snakefile:
+Command ' set -euo pipefail;  Rscript /home/lisanne/Blok11/Informatica11/.snakemake.42c5kqxq.inlezen.R ' returned non-zero exit status 1.
+  File "/home/lisanne/project11.venv/Snakefile", line 12, in __rule_get_genes
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-04T184410.980866.snakemake.log

@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	calc_gc
+	1	final
+	2
+
+rule calc_gc:
+    input: nc_sequences.txt
+    output: GC.pdf
+    jobid: 7
+
+Finished job 7.
+1 of 2 steps (50%) done
+
+localrule final:
+    input: ID.csv, groot_ID.csv, sequences.fasta, pubmedids.csv, SamplesInSamePubmedArticle.csv, allpathways.csv, nc_sequences.txt, GC.pdf
+    jobid: 0
+
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-08T161539.243857.snakemake.log

@@ -1,0 +1,57 @@
+rule final:
+	input: 	"ID.csv",
+		"groot_ID.csv",
+		"sequences.fasta",
+		"functions_per_id.csv",
+		"pubmedids.csv",
+		"SamplesInSamePubmedArticle.csv",
+		"allpathways.csv",
+		"nc_sequences.txt"
+
+rule get_some_ids:
+	input:	"../Blok11/data/RNA-Seq-counts.txt"
+    	output:	"ID.csv"
+    	script:	"inlezen.R"
+
+rule get_all_ids:
+	input: "../Blok11/data/RNA-Seq-counts.txt"
+	output:	"groot_ID.csv"
+	script:	"inlezen_alles.R"
+
+rule get_genes:
+    	input:	"ID.csv"
+    	output:	"sequences.fasta",
+		"sequences.txt"
+    	script:	"function_gene.py"
+
+rule get_functions:
+	input:	"ID.csv"
+	output:	"functions_per_id.csv"
+	script: "functionsperid.py"
+
+rule get_pubmed_ids:
+	input:	"groot_ID.csv"
+	output:	"pubmedids.csv"
+	script:	"pubmedid.py"
+
+rule co_occurence:
+	input:	"pubmedids.csv"
+	output:	"SamplesInSamePubmedArticle.csv"
+	script: "co_occurence_dic_edition2.py"
+
+rule kegg:
+	input:	"ID.csv"
+	output:	"allpathways.csv"
+	script:	"kegg_pathway.py"
+
+rule get_nc_sequence:
+	input:	"ID.csv"
+	output:	"nc_sequences.txt"
+	script:	"get_nucleotide_seq.py"
+
+rule calc_gc:
+	input:	"nc_sequences.txt"
+	script:	"gc_perc.R"
+
+
+
