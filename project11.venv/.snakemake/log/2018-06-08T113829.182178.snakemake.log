@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	1	get_all_ids
+	1	get_genes
+	1	get_pubmed_ids
+	1	get_some_ids
+	5
+
+rule get_all_ids:
+    input: ../Blok11/data/RNA-Seq-counts.txt
+    output: groot_ID.csv
+    jobid: 3
+
+Finished job 3.
+1 of 5 steps (20%) done
+
+rule get_some_ids:
+    input: ../Blok11/data/RNA-Seq-counts.txt
+    output: ID.csv
+    jobid: 2
+
+Finished job 2.
+2 of 5 steps (40%) done
+
+rule get_pubmed_ids:
+    input: groot_ID.csv
+    output: pubmedids.csv
+    jobid: 4
+
+Terminating processes on user request, this might take some time.
+    Error in rule get_pubmed_ids:
+        jobid: 4
+        output: pubmedids.csv
+
+RuleException:
+CalledProcessError in line 28 of /home/lisanne/project11.venv/Snakefile:
+Command ' set -euo pipefail;  /home/lisanne/miniconda3/bin/python /home/lisanne/project11.venv/.snakemake.zetxo2nw.pubmedid.py ' returned non-zero exit status 1.
+  File "/home/lisanne/project11.venv/Snakefile", line 28, in __rule_get_pubmed_ids
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-08T113829.182178.snakemake.log

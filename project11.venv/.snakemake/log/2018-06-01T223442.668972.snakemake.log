@@ -1,0 +1,2 @@
+SyntaxError in line 15 of /home/lisanne/project11.venv/Snakefile:
+Unexpected keyword seq_id in rule definition (Snakefile, line 15)

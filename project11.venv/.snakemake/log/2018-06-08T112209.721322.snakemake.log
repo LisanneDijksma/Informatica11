@@ -1,0 +1,2 @@
+SyntaxError in line 27 of /home/lisanne/project11.venv/Snakefile:
+No rule keywords allowed after run/shell/script/wrapper/cwl in rule get_genes. (Snakefile, line 27)

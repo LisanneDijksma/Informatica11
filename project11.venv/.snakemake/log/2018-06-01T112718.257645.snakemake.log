@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Genes
+	1
+
+rule Genes:
+    input: ../Documenten/Informatica11/Project11/id_test.csv
+    output: Documenten/Informatica11/Project11/sequences.fasta, Documenten/Informatica11/Project11/sequences.txt
+    jobid: 0
+
+    Error in rule Genes:
+        jobid: 0
+        output: Documenten/Informatica11/Project11/sequences.fasta, Documenten/Informatica11/Project11/sequences.txt
+
+RuleException:
+WorkflowError in line 9 of /home/lisanne/project11.venv/Snakefile:
+URLError: <urlopen error [Errno 2] No such file or directory: '/home/lisanne/project11.venv/Documenten/Informatica11/Project11/gene_function.py'>
+  File "/home/lisanne/project11.venv/Snakefile", line 9, in __rule_Genes
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-01T112718.257645.snakemake.log

@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	1	kegg
+	2
+
+rule kegg:
+    input: ID.csv
+    output: allpathways.csv
+    jobid: 4
+
+Terminating processes on user request, this might take some time.
+    Error in rule kegg:
+        jobid: 4
+        output: allpathways.csv
+
+RuleException:
+CalledProcessError in line 38 of /home/lisanne/project11.venv/Snakefile:
+Command ' set -euo pipefail;  /home/lisanne/miniconda3/bin/python /home/lisanne/project11.venv/.snakemake.8ttooyb3.kegg_pathway.py ' returned non-zero exit status 1.
+  File "/home/lisanne/project11.venv/Snakefile", line 38, in __rule_kegg
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-08T132426.178819.snakemake.log

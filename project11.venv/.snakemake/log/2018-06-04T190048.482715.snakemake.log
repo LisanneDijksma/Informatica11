@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	1	get_ids
+	2
+
+rule get_ids:
+    input: ../Blok11/data/RNA-Seq-counts.txt
+    output: ID.csv
+    jobid: 1
+
+Finished job 1.
+1 of 2 steps (50%) done
+
+localrule final:
+    input: ID.csv
+    jobid: 0
+
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-04T190048.482715.snakemake.log

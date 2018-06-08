@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	final
+	1	get_genes
+	2
+
+rule get_genes:
+    input: ID.csv
+    output: sequences.fasta
+    jobid: 1
+
+    Error in rule get_genes:
+        jobid: 1
+        output: sequences.fasta
+
+RuleException:
+CalledProcessError in line 24 of /home/lisanne/project11.venv/Snakefile:
+Command ' set -euo pipefail;  python3 funcion_gene.py echo -ne ' returned non-zero exit status 2.
+  File "/home/lisanne/project11.venv/Snakefile", line 24, in __rule_get_genes
+  File "/home/lisanne/miniconda3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/lisanne/project11.venv/.snakemake/log/2018-06-08T112228.839509.snakemake.log

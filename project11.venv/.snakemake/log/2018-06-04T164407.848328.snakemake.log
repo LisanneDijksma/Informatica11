@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 8 of /home/lisanne/project11.venv/Snakefile:
+Missing input files for rule get_genes:
+data/RNA-Seq-counts.txt
