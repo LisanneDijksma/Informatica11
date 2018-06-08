@@ -37,5 +37,6 @@ Na het runnen van de workflow worden er verschillende output bestanden gegegener
 
 Belangrijk:
 
-    Als de workflow opnieuw wordt uitgevoerd en er wijzigingen zijn aan de bestanden moeten alle output bestanden worden                verwijderd uit de "project11.venv" map, of moet het "snakemake --forceall" commando worden gebruikt. 
+    Als de workflow opnieuw wordt uitgevoerd en er wijzigingen zijn aan de bestanden moeten alle output bestanden worden                
+    verwijderd uit de "project11.venv" map, of moet het "snakemake --forceall" commando worden gebruikt. 
 
